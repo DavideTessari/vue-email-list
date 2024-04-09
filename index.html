@@ -7,12 +7,13 @@
 </head>
 <body>
     <div id="app">
-        <h1>Lista di Indirizzi Email Casuali</h1>
-        <ul>
+        <h1>Lista di indirizzi email casuali</h1>
+        <ul v-if="userEmails.length === 10">
             <li v-for="(email, index) in userEmails" :key="index">
                 {{ email }}
             </li>
         </ul>
+        <p v-else>Sto caricando gli indirizzi email...</p>
     </div>
 
     <!-- Includi Vue 3 e Axios -->
@@ -21,6 +22,7 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
