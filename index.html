@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Email</title>
+    <title>Random Emails</title>
 </head>
 <body>
     <div id="app">
-        <div>{{ userEmail }}</div>
+        <h1>Lista di Indirizzi Email Casuali</h1>
+        <ul>
+            <li v-for="(email, index) in userEmails" :key="index">
+                {{ email }}
+            </li>
+        </ul>
     </div>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+    <!-- Includi Vue 3 e Axios -->
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
